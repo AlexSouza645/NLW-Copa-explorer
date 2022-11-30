@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 ul {
   list-style: none;
 }
@@ -11,17 +12,25 @@ body {
   background-color: #121214;
   background-image: url(./assets/bg.svg);
   background-position-x: center;
-  background-position-y: 55.6%;
+  background-position-y: -715px;
 }
 
 #app {
-  width: fit-content; /*encaixe o conteudo na caixa*/
+  width: fit-content;
+  /*encaixe o conteudo na caixa*/
   margin-top: 52px auto;
 }
 
 header {
   margin-bottom: 63px;
 }
+
+#cards {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
 
 .card {
   padding: 32px 23px;
@@ -70,15 +79,16 @@ body * {
   color: #e1e1e6;
 }
 
-.card ul li + li{
-padding-top: 24px;
-border-top:1px solid #323238;
+.card ul li+li {
+  padding-top: 24px;
+  border-top: 1px solid #323238;
 
 }
 
 .card ul {
-  display: flex ;
-  flex-direction: column;/*umm abaixo de outro*/
+  display: flex;
+  flex-direction: column;
+  /*umm abaixo de outro*/
   gap: 24px;
   width: 270px;
 }
