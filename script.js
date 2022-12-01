@@ -15,7 +15,7 @@ function createGame(player1, hour, player2) {
 }
 
 
-function createCard(date, day,games) {
+function createCard(date, day, games) {
 
   return `
     <div class="card">
@@ -35,8 +35,8 @@ document.querySelector('#app').innerHTML = `
         <img src="./assets/logo.svg" alt="" />
       </header>
       <main id="cards">
-        ${createCard('24/11', 'quinta', createGame('Brazil','16:00', 'Serbia'))}
-        ${createCard('28/11', 'segunda', createGame('Switizerland','13:00','Brazil'))}
-        ${createCard('02/12', 'sexta', createGame( 'Brazil','16:00','Cameroon'))}  
+        ${createCard('24/11', 'quinta', createGame('Brazil', '16:00', 'Serbia') )}
+        ${createCard('28/11', 'segunda', createGame('Switizerland', '13:00', 'Brazil')+  createGame('Portugal','16:00','Uruguai') )}
+        ${createCard('02/12', 'sexta', createGame('Brazil', '16:00', 'Cameroon'))}  
       </main>
 `
