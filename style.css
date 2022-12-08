@@ -92,3 +92,33 @@ body * {
   gap: 24px;
   width: 270px;
 }
+
+/* animação de icones */
+.card ul li strong:hover,
+
+/*hover é qdo passar o mouse por ci */
+.card ul li img:hover {
+  transform: scale(1.1);
+  /*ao passar o mouse o icone aumentara de escala*/
+
+}
+
+.card ul li strong,
+.card ul li img {
+  transition: transform 0.3s;
+}
+
+.card{
+  animation: appear .7s;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
