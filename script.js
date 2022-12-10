@@ -14,16 +14,17 @@ function createGame(player1, hour, player2) {
   `
 }
 
-
+// variável de controle
+let delay = -0.3;
 function createCard(date, day, games) {
-
+  delay = delay +  0.3;
   return `
-    <div class="card">
+    <div class="card" style="animation-delay: ${delay}s">
           <h2>${date}<span>${day}</span></h2>
           <ul>
             
             ${games}
-          </ul>
+          </ul> 
         </div>
     
     `
@@ -35,6 +36,6 @@ document.querySelector('#cards').innerHTML =
 
   createCard('24/11', 'quinta', createGame('Brazil', '16:00', 'Serbia'))
   + createCard('28/11', 'segunda', createGame('Switizerland', '13:00', 'Brazil')
-  , createGame('Portugal', '16:00', 'Uruguai'))
+    +  createGame('Portugal', '16:00', 'Uruguai'))
   + createCard('02/12', 'sexta', createGame('Brazil', '16:00', 'Cameroon'))
 
