@@ -7,8 +7,13 @@
 /* cores primárias */
 :root{
   --card-color-primary:#f7dd43;
+  --card-border-color: #746615;
 }
-
+/* cores dinamicas */
+body.blue{
+  --card-color-primary:#338af3;
+  --card-border-color: #338af3;
+}
 
 
 ul {
@@ -43,7 +48,7 @@ header {
   padding: 32px 23px;
   text-align: center;
   background: #1d1c19;
-  border-bottom: 2px solid #f7dd43;
+  border-bottom: 2px solid var(--card-color-primary);/*var que é colocada no root*/
   border-radius: 6px;
 }
 
@@ -52,7 +57,7 @@ header {
   gap: 16px;
   justify-content: center;
   padding: 8px 16px;
-  border: 1px solid #746615;
+  border: 1px solid var(--card-border-color);
   border-radius: 6px;
   width: fit-content;
   margin-inline: auto;
