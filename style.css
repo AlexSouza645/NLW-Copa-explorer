@@ -39,8 +39,9 @@ body * {
 
 #app {
   width: fit-content;
-  margin: auto;
+  margin: auto 50px;
   padding-top: 52px;
+  /* margin-left: 10px; */
 }
 
 header {
@@ -50,7 +51,7 @@ header {
 
 #cards {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 32px;
 }
 
@@ -141,10 +142,19 @@ header {
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
   #cards {
-    max-width: 670px;
+    max-width: 1070px;
     flex-direction: row;
     flex-wrap: wrap;
   }
+}
+
+.card em{
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 125%;
+
+  color: #e1e1e6;
+  width:px;  flex-wrap: wrap;
 }

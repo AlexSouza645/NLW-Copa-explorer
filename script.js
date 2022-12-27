@@ -1,11 +1,12 @@
 
-function createGame(player1, hour, player2) {
+function createGame(player1,grupo, hour, player2) {
 
   return `
   <li>
      <img src="./assets/icon-${player1}.svg" alt="Bandeira do ${player1}" />
-     <strong>${hour}</strong>
-     <img src="./assets/icon-${player2}.svg" alt="Bandeira do ${player2}" />
+     <em>${grupo}</em>
+     <strong>${hour}</strong> 
+     <img src="/assets/icon-${player2}.svg" alt="Bandeira do ${player2}" />
            
            
            
@@ -17,7 +18,7 @@ function createGame(player1, hour, player2) {
 // variável de controle
 let delay = -0.3;
 function createCard(date, day, games) {
-  delay = delay +  0.3;
+  delay = delay + 0.3;
   return `
     <div class="card" style="animation-delay: ${delay}s">
           <h2>${date}<span>${day}</span></h2>
@@ -31,8 +32,8 @@ function createCard(date, day, games) {
 }
 
 document.querySelector('#cards').innerHTML =
-  createCard('24/11', 'quinta', createGame('brazil', '16:00', 'serbia'))
+  createCard('24/11', 'quinta', createGame('brazil', 'grupo b','16:00', 'serbia')+ createGame('switizerland','07:00','cameroon' )  )
   + createCard('28/11', 'segunda', createGame('Switizerland', '13:00', 'brazil')
-    +  createGame('Portugal', '16:00', 'Uruguai'))
-  + createCard('02/12', 'sexta', createGame('brazil', '16:00', 'Cameroon'))
+    + createGame('Portugal', '16:00', 'Uruguai'))
+  + createCard('02/12', 'sexta', createGame('brazil', '16:00', 'Cameroon')+ createGame('serbia', '16:00', 'switizerland'))+createCard()
 
