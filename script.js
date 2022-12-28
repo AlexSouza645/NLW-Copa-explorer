@@ -1,10 +1,11 @@
 
-function createGame(player1,grupo, hour, player2) {
+function createGame(grupo, player1, hour, player2) {
 
   return `
   <li>
+  <em>${grupo}</em>
      <img src="./assets/icon-${player1}.svg" alt="Bandeira do ${player1}" />
-     <em>${grupo}</em>
+     
      <strong>${hour}</strong> 
      <img src="/assets/icon-${player2}.svg" alt="Bandeira do ${player2}" />
            
@@ -32,8 +33,21 @@ function createCard(date, day, games) {
 }
 
 document.querySelector('#cards').innerHTML =
-  createCard('24/11', 'quinta', createGame('brazil', 'grupo b','16:00', 'serbia')+ createGame('switizerland','07:00','cameroon' )  )
-  + createCard('28/11', 'segunda', createGame('Switizerland', '13:00', 'brazil')
-    + createGame('Portugal', '16:00', 'Uruguai'))
-  + createCard('02/12', 'sexta', createGame('brazil', '16:00', 'Cameroon')+ createGame('serbia', '16:00', 'switizerland'))+createCard()
+  createCard('24/11', 'quinta',
+    createGame('Grupo G', 'switizerland', '07:00', 'cameroon')
+    + createGame('Grupo G', 'brazil', '16:00', 'serbia')
+    + createGame('Grupo H', 'uruguai', '10:00', 'coreia')
+    + createGame('Grupo H', 'portugal', '13:00', 'gana'))
+  + createCard('28/11', 'segunda',
+    createGame('Grupo G', 'Cameroon', '07:00', 'serbia')
+    + createGame("Grupo H", "coreia", "10:00", "gana")
+    + createGame('Grupo G', 'Switizerland', '12:00', 'brazil')
+    + createGame('Grupo H', 'Portugal', '16:00', 'Uruguai')
+  )
+  + createCard('02/12', 'sexta', 
+  createGame('Grupo G', 'brazil', '16:00', 'Cameroon')
+    + createGame('Grupo G', 'serbia', '16:00', 'switizerland')
+    + createGame('Grupo H', 'GANA', '16:00', 'Uruguai')
+    + createGame('Grupo H', 'coreia', '16:00', 'portugal'))
+  
 

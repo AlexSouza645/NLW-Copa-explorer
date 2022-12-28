@@ -92,7 +92,7 @@ header {
   flex-direction: column;
   gap: 24px;
 
-  width: 270px;
+  width: 290px;
 }
 
 .card ul li {
@@ -144,7 +144,7 @@ header {
 
 @media (min-width: 600px) {
   #cards {
-    max-width: 1070px;
+    max-width: 1200px;
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -157,4 +157,5 @@ header {
 
   color: #e1e1e6;
   width:px;  flex-wrap: wrap;
+  margin-left: 10px;
 }
