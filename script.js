@@ -41,8 +41,8 @@ document.querySelector('#cards').innerHTML =
   )
   + createCard('02/12', 'sexta',
     createGame('Grupo G', 'brazil', '16:00', 'Cameroon')
-    + createGame('Grupo G', 'serbia', '16:00', 'switizerland')
-    + createGame('Grupo H', 'GANA', '16:00', 'Uruguai')
-    + createGame('Grupo H', 'coreia', '16:00', 'portugal'))
+    + createGame('Grupo G', 'serbia', '16:00', 'Switizerland')
+    + createGame('Grupo H', 'gana', '16:00', 'Uruguai')
+    + createGame('Grupo H', 'coreia', '16:00', 'Portugal'))
 
 
